@@ -7,7 +7,6 @@
 
         Dim ip As Double
 
-        ' Validasi input
         If Double.TryParse(txtIPSemester.Text, ip) Then
 
             If ip >= 0 And ip <= 4 Then
@@ -18,18 +17,16 @@
                 Dim ipk As Double = totalIP / jumlahSemester
                 txtIPKumulatif.Text = ipk.ToString("0.00")
 
-                ' Menentukan predikat
                 If ipk >= 2.0 And ipk <= 2.75 Then
-                    lblPredikat.Text = "Cukup"
+                    lblPredikat.Text = "cukup"
                 ElseIf ipk >= 2.76 And ipk <= 3.0 Then
                     lblPredikat.Text = "Memuaskan"
                 ElseIf ipk >= 3.01 Then
-                    lblPredikat.Text = "Sangat Memuaskan"
+                    lblPredikat.Text = "sangat Memuaskan"
                 Else
                     lblPredikat.Text = ""
                 End If
 
-                ' Kosongkan input
                 txtIPSemester.Clear()
                 txtIPSemester.Focus()
 
@@ -38,7 +35,7 @@
             End If
 
         Else
-            MessageBox.Show("Masukkan angka yang valid!")
+            MessageBox.Show("masukan angka yang valid!")
         End If
 
     End Sub
@@ -61,6 +58,10 @@
     End Sub
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub txtIPSemester_TextChanged(sender As Object, e As EventArgs) Handles txtIPSemester.TextChanged
 
     End Sub
 End Class

@@ -37,6 +37,7 @@ Partial Class Form1
         txtIPSemester.Name = "txtIPSemester"
         txtIPSemester.Size = New Size(241, 31)
         txtIPSemester.TabIndex = 0
+        txtIPSemester.Text = "1"
         ' 
         ' txtIPKumulatif
         ' 
